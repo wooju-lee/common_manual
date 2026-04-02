@@ -117,7 +117,7 @@ export default function Home() {
               <Translate id="home.manuals.title">사용자별 매뉴얼</Translate>
             </h2>
             <div className={styles.cards}>
-              <Link className={styles.card} to="/docs/scm/purchase-order/intro">
+              <Link className={styles.card} to="/docs/scm/purchase-order/initial-stock">
                 <h3><span className={styles.cardEmoji}>📦</span>SCM</h3>
                 <p>Logistics</p>
               </Link>
