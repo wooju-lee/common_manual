@@ -4,15 +4,18 @@
  * work well for content-centric websites.
  */
 
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css');
+
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
+  --ifm-font-family-base: 'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  --ifm-color-primary: #e8a54b;
+  --ifm-color-primary-dark: #e59836;
+  --ifm-color-primary-darker: #e3922b;
+  --ifm-color-primary-darkest: #c47a17;
+  --ifm-color-primary-light: #ebb260;
+  --ifm-color-primary-lighter: #edb86b;
+  --ifm-color-primary-lightest: #f2cb8f;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 }
@@ -27,4 +30,228 @@
   --ifm-color-primary-lighter: #32d8b4;
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+/* Overall scale */
+html {
+  font-size: 76%;
+}
+
+/* Sidebar */
+:root {
+  --doc-sidebar-width: 200px;
+}
+
+.menu {
+  padding-top: 1.2rem;
+}
+
+.menu__list-item {
+  margin-bottom: 1.2rem;
+}
+
+/* Sidebar category (folder) - bold only when expanded */
+.menu__list-item--collapsed .menu__link--sublist-caret {
+  font-weight: 400;
+}
+.menu__link--sublist-caret {
+  font-weight: 600;
+}
+
+/* Sidebar sub-items smaller */
+.menu__list .menu__list .menu__link {
+  font-size: 0.85em;
+}
+
+/* Sidebar arrow thinner */
+.menu__link--sublist-caret::after,
+.menu__caret::before {
+  background-size: 1rem 1rem;
+  opacity: 0.4;
+}
+
+/* Locale dropdown - hide language icon */
+[class*='localeDropdown'] .navbar__link {
+  color: var(--ifm-color-primary);
+}
+svg[class*='iconLanguage'] {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+  overflow: hidden !important;
+}
+
+/* Color mode toggle */
+.navbar [class*='toggleButton'] svg,
+.navbar [class*='colorModeToggle'] svg {
+  width: 14px;
+  height: 14px;
+}
+
+/* Doc page title */
+.markdown h1:first-child {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 0.3rem;
+}
+
+/* Header block: h1 + blockquote */
+.markdown h1:first-child + blockquote {
+  margin-bottom: 2rem;
+}
+
+.markdown h2 {
+  font-size: 1.2rem;
+}
+
+.markdown h3 {
+  font-size: 1rem;
+}
+
+/* Hide breadcrumbs */
+.theme-doc-breadcrumbs {
+  display: none !important;
+}
+
+/* Hide edit link and pagination */
+.theme-edit-this-page,
+.pagination-nav {
+  display: none !important;
+}
+
+/* Doc content styling */
+.markdown {
+  line-height: 1.8;
+  padding-left: 2rem;
+}
+
+.markdown h2 {
+  margin-top: 2.5rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 2px solid var(--ifm-color-primary);
+}
+
+.markdown h3 {
+  margin-top: 1.8rem;
+  color: var(--ifm-color-emphasis-800);
+}
+
+/* Table styling */
+.markdown table {
+  font-size: 0.82rem;
+  border-collapse: collapse;
+  border: none;
+  width: 100%;
+}
+
+.markdown table thead tr {
+  background: #f0f0f0;
+  color: var(--ifm-color-emphasis-800);
+}
+
+[data-theme='dark'] .markdown table thead tr {
+  background: #383838;
+  color: #ddd;
+}
+
+.markdown table th {
+  font-weight: 500;
+  padding: 0.7rem 1rem;
+  text-align: left;
+  border: none;
+  letter-spacing: 0.02em;
+}
+
+.markdown table td {
+  padding: 0.7rem 1rem;
+  border-bottom: 1px solid var(--ifm-color-emphasis-100);
+  border-left: none;
+  border-right: none;
+}
+
+.markdown table tbody tr:hover {
+  background: rgba(232, 165, 75, 0.06);
+}
+
+.markdown table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Admonition (tip, caution, info) compact */
+.theme-admonition {
+  font-size: 0.85rem;
+  padding: 0.8rem 1rem;
+  margin: 1rem 0;
+  border-radius: 6px;
+}
+
+/* Ordered list styling */
+.markdown ol {
+  padding-left: 1.5rem;
+}
+
+.markdown ol li {
+  margin-bottom: 0.4rem;
+}
+
+/* Code inline */
+.markdown code {
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+  font-size: 0.82em;
+}
+
+/* Blockquote */
+.markdown blockquote {
+  border-left: 3px solid var(--ifm-color-primary);
+  padding: 0.3rem 1rem;
+  margin: 0.5rem 0;
+  background: transparent;
+  border-radius: 0;
+  font-size: 0.9rem;
+}
+
+.markdown blockquote p {
+  margin: 0.2rem 0;
+}
+
+/* TOC (Table of Contents) */
+.table-of-contents {
+  background: #f8f6f2;
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 8px;
+  padding: 1rem 1.2rem;
+  font-size: 0.8rem;
+}
+
+[data-theme='dark'] .table-of-contents {
+  background: #2a2a2a;
+}
+
+
+.table-of-contents li {
+  margin-bottom: 0.3rem;
+}
+
+/* Highlight marker */
+mark {
+  background: rgba(232, 165, 75, 0.25);
+  padding: 0.1rem 0.3rem;
+  border-radius: 3px;
+  color: inherit;
+}
+
+/* HR divider */
+.markdown hr {
+  border: none;
+  border-top: 1px solid var(--ifm-color-emphasis-200);
+  margin: 2rem 0;
+}
+
+/* Footer */
+.footer {
+  padding: 4px 0;
+}
+.footer .footer__copyright {
+  font-size: 10px;
 }

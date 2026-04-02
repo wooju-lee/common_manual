@@ -10,7 +10,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Common Manual',
+  title: 'IIC BO : User Manual',
   tagline: 'Common Manual Documentation',
   favicon: 'img/favicon.ico',
 
@@ -30,8 +30,12 @@ const config = {
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
+    defaultLocale: 'ko',
+    locales: ['ko', 'en'],
+    localeConfigs: {
+      ko: { label: 'Korean', htmlLang: 'ko' },
+      en: { label: 'English', htmlLang: 'en' },
+    },
   },
 
   presets: [
@@ -75,70 +79,45 @@ const config = {
         respectPrefersColorScheme: true,
       },
       navbar: {
-        title: 'Common Manual',
+        title: 'IIC BO : User Manual',
         logo: {
-          alt: 'Common Manual Logo',
-          src: 'img/logo.svg',
+          alt: 'IIC BO Logo',
+          src: 'img/logo.png',
         },
         items: [
           {
             type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
+            sidebarId: 'scmSidebar',
             position: 'left',
-            label: 'Tutorial',
+            label: 'SCM',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
           {
-            href: 'https://github.com/wooju-lee/common_manual',
-            label: 'GitHub',
+            type: 'docSidebar',
+            sidebarId: 'mdSidebar',
+            position: 'left',
+            label: 'MD',
+          },
+          {
+            type: 'docSidebar',
+            sidebarId: 'labSidebar',
+            position: 'left',
+            label: 'Lab',
+          },
+          {
+            type: 'docSidebar',
+            sidebarId: 'storeSidebar',
+            position: 'left',
+            label: 'Store',
+          },
+          {
+            type: 'localeDropdown',
             position: 'right',
           },
         ],
       },
       footer: {
         style: 'dark',
-        links: [
-          {
-            title: 'Docs',
-            items: [
-              {
-                label: 'Tutorial',
-                to: '/docs/intro',
-              },
-            ],
-          },
-          {
-            title: 'Community',
-            items: [
-              {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              },
-              {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
-              },
-              {
-                label: 'X',
-                href: 'https://x.com/docusaurus',
-              },
-            ],
-          },
-          {
-            title: 'More',
-            items: [
-              {
-                label: 'Blog',
-                to: '/blog',
-              },
-              {
-                label: 'GitHub',
-                href: 'https://github.com/wooju-lee/common_manual',
-              },
-            ],
-          },
-        ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: 'Copyright © 2026 IIC_PM Wooju. All rights reserved.',
       },
       prism: {
         theme: prismThemes.github,
