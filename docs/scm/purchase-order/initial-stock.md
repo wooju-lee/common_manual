@@ -1,6 +1,8 @@
 ---
 sidebar_label: 법인 초기 재고 입고
 sidebar_position: 1
+author: Wooju
+created: "2026-04-06"
 ---
 
 # 📍 법인 초기 재고 입고
@@ -14,6 +16,21 @@ sidebar_position: 1
 | 구분 | AS-IS (Netsuite ERP) | TO-BE (IIC BO) |
 |:---:|---|---|
 | **입고 오더 생성** | HQ SAP 입고 정보 등록 → BO Inbound 전달 → Netsuite 오더 생성 | HQ SAP 입고 정보 등록 → <mark>BO Inbound 목록 생성</mark> → Netsuite 오더 생성 요청 |
+
+<details>
+<summary>📷 AS-IS 화면 보기</summary>
+
+*이미지 준비 중*
+
+</details>
+
+<details>
+<summary>📷 TO-BE 화면 보기</summary>
+
+*이미지 준비 중*
+
+</details>
+
 | **입고 확정** | Netsuite에서 수동 상태 변경 | WMS 상태 수신으로 자동 확정 또는 BO 수기 처리 |
 | **재고 반영** | Netsuite 내 수동 재고 반영 | 입고 확정 시 BO · ERP 재고 자동 반영 |
 | **시스템 연동** | 단일 시스템 (Netsuite) | SAP ↔ IIC BO ↔ Netsuite ↔ WMS 실시간 연동 |

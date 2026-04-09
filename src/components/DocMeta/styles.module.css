@@ -1,0 +1,9 @@
+.docMeta {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  font-size: 0.78rem;
+  color: var(--ifm-color-emphasis-600);
+  padding: 0.5rem 0;
+  margin-bottom: -0.5rem;
+}

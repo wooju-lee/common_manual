@@ -70,6 +70,8 @@ const config = {
     ],
   ],
 
+  plugins: ['docusaurus-plugin-image-zoom'],
+
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
@@ -87,15 +89,15 @@ const config = {
         items: [
           {
             type: 'docSidebar',
-            sidebarId: 'scmSidebar',
+            sidebarId: 'storeSidebar',
             position: 'left',
-            label: 'SCM',
+            label: 'Store',
           },
           {
             type: 'docSidebar',
-            sidebarId: 'mdSidebar',
+            sidebarId: 'scmSidebar',
             position: 'left',
-            label: 'MD',
+            label: 'SCM',
           },
           {
             type: 'docSidebar',
@@ -105,9 +107,9 @@ const config = {
           },
           {
             type: 'docSidebar',
-            sidebarId: 'storeSidebar',
+            sidebarId: 'mdSidebar',
             position: 'left',
-            label: 'Store',
+            label: 'MD',
           },
           {
             type: 'localeDropdown',
@@ -122,6 +124,13 @@ const config = {
       prism: {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
+      },
+      zoom: {
+        selector: '.markdown img',
+        background: {
+          light: 'rgba(255, 255, 255, 0.9)',
+          dark: 'rgba(0, 0, 0, 0.9)',
+        },
       },
     }),
 };

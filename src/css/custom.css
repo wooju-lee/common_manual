@@ -42,6 +42,7 @@ html {
   --doc-sidebar-width: 200px;
 }
 
+
 .menu {
   padding-top: 1.2rem;
 }
@@ -91,7 +92,7 @@ svg[class*='iconLanguage'] {
 /* Doc page title */
 .markdown h1:first-child {
   font-size: 1.5rem;
-  margin-top: 1rem;
+  margin-top: 2.2rem;
   margin-bottom: 0.3rem;
 }
 
@@ -123,6 +124,12 @@ svg[class*='iconLanguage'] {
 .markdown {
   line-height: 1.8;
   padding-left: 2rem;
+  max-width: 100%;
+}
+
+/* Table container full width */
+.markdown table {
+  min-width: 100%;
 }
 
 .markdown h2 {
@@ -215,6 +222,36 @@ svg[class*='iconLanguage'] {
   margin: 0.2rem 0;
 }
 
+/* Path badge */
+.path-badge {
+  display: inline-block;
+  background: #444444;
+  color: #fff;
+  font-size: 0.78rem;
+  font-weight: 500;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  letter-spacing: 0.02em;
+}
+
+/* QnA section */
+.qna-section h2 {
+  border-bottom-color: #3498db;
+}
+
+.qna-section blockquote {
+  border-left-color: #3498db;
+}
+
+.qna-section blockquote strong {
+  color: #3498db;
+}
+
+/* Warning blockquote (red) */
+.blockquote-warning blockquote {
+  border-left-color: #e74c3c;
+}
+
 /* TOC (Table of Contents) */
 .table-of-contents {
   background: #f8f6f2;
@@ -233,9 +270,60 @@ svg[class*='iconLanguage'] {
   margin-bottom: 0.3rem;
 }
 
+/* Details/Summary (image toggle) */
+.markdown details {
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 6px;
+  padding: 0.3rem 0.8rem;
+  margin: 0.4rem 0;
+  font-size: 0.8rem;
+  background: transparent;
+}
+
+.markdown details {
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  margin: 1.2rem 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.markdown details summary {
+  cursor: pointer;
+  font-weight: 500;
+  padding: 0.5rem 0.8rem;
+  background: var(--ifm-color-emphasis-100);
+  border-radius: 6px;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.markdown details summary::-webkit-details-marker {
+  display: none;
+}
+
+.markdown details summary::before {
+  content: '▶';
+  font-size: 0.55rem;
+  color: var(--ifm-color-emphasis-600);
+  flex-shrink: 0;
+  transition: transform 0.2s;
+}
+
+.markdown details[open] summary::before {
+  transform: rotate(90deg);
+}
+
+.markdown details > :not(summary) {
+  padding: 0.6rem 1rem 0.4rem 2rem;
+}
+
 /* Highlight marker */
 mark {
-  background: rgba(232, 165, 75, 0.25);
+  background: rgba(46, 204, 182, 0.2);
   padding: 0.1rem 0.3rem;
   border-radius: 3px;
   color: inherit;

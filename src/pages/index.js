@@ -106,6 +106,10 @@ export default function Home() {
                     <td className={styles.label}>Develop</td>
                     <td>곽형규, 이수빈, 김윤욱</td>
                   </tr>
+                  <tr>
+                    <td className={styles.label}>ERP</td>
+                    <td>Denny Han, 전세령</td>
+                  </tr>
                 </tbody>
               </table>
             </section>
@@ -129,7 +133,7 @@ export default function Home() {
                 <h3><span className={styles.cardEmoji}>🥽</span>Lab</h3>
                 <p>Lens Processing</p>
               </Link>
-              <Link className={styles.card} to="/docs/store/intro">
+              <Link className={styles.card} to="/docs/store/system-login">
                 <h3><span className={styles.cardEmoji}>🏩</span>Store</h3>
                 <p>Store Operations</p>
               </Link>
