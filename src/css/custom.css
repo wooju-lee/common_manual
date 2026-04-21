@@ -252,6 +252,12 @@ svg[class*='iconLanguage'] {
   border-left-color: #e74c3c;
 }
 
+/* Gray blockquote (subdued) */
+.blockquote-gray blockquote {
+  border-left-color: #aaa;
+  color: var(--ifm-color-emphasis-700);
+}
+
 /* TOC (Table of Contents) */
 .table-of-contents {
   background: #f8f6f2;
@@ -327,6 +333,14 @@ mark {
   padding: 0.1rem 0.3rem;
   border-radius: 3px;
   color: inherit;
+}
+
+/* Image border */
+.markdown img {
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 6px;
+  padding: 4px;
+  margin: 0.8rem 0;
 }
 
 /* HR divider */
