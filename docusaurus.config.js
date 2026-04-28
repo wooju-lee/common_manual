@@ -103,7 +103,7 @@ const config = {
             type: 'docSidebar',
             sidebarId: 'labSidebar',
             position: 'left',
-            label: 'Lab',
+            label: 'Lab & Optician',
           },
           {
             type: 'docSidebar',

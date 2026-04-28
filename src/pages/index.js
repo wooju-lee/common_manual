@@ -129,8 +129,8 @@ export default function Home() {
                 <h3><span className={styles.cardEmoji}>🏷️</span>MD</h3>
                 <p>Merchandising</p>
               </Link>
-              <Link className={styles.card} to="/docs/lab/intro">
-                <h3><span className={styles.cardEmoji}>🥽</span>Lab</h3>
+              <Link className={styles.card} to="/docs/lab/system-login">
+                <h3><span className={styles.cardEmoji}>🥽</span>Lab & Optician</h3>
                 <p>Lens Processing</p>
               </Link>
               <Link className={styles.card} to="/docs/store/system-login">
