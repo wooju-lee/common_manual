@@ -26,59 +26,73 @@ created: "2026-04-21"
 
 ## 2. QZ Tray 설치
 
-| Step | 내용 |
-|:---:|---|
-| **a** | QZ Tray 다운로드: https://qz.io/download/ |
-| | 위 URL에서 설치합니다 |
+> **Step a.** https://qz.io/download/ 에 접속하여 **Direct Download** 버튼을 클릭합니다.
+
+![QZ Tray 다운로드 페이지](./img/1.png)
 
 ---
 
-## 3. 공개키 설정 (.pem 파일 세팅)
+> **Step b.** 설치 마법사가 실행되면 **Next >** 를 클릭합니다.
 
-`qz-certificate.pem` 파일을 QZ Tray에 등록하는 과정입니다.
-
----
-
-> **Step a.** `qz-certificate.pem` 파일을 다운로드합니다.
-
-![qz-certificate.pem 다운로드](./img/스크린샷%202026-04-21%20오후%203.14.15.png)
+![QZ Tray Setup - Welcome](./img/2.png)
 
 ---
 
-> **Step b.** 작업표시줄에서 **qz-tray 아이콘**을 클릭합니다.
+> **Step c.** 설치 경로를 확인한 후 **Install** 을 클릭합니다.
 
-![qz-tray 메뉴](./img/스크린샷%202026-04-21%20오후%203.11.00.png)
-
----
-
-> **Step c.** **Advanced → Site Manager** 를 선택합니다.
-
-![Advanced > Site Manager](./img/스크린샷%202026-04-21%20오후%203.11.49.png)
+![QZ Tray Setup - Install Location](./img/3.png)
 
 ---
 
-> **Step d.** Site Manager 창에서 **`+` 아이콘**을 클릭하여 사이트를 추가하고, **Allowed** 탭에서 허용되었는지 확인합니다.
+> **Step d.** 설치가 완료되면 **Close** 를 클릭합니다.
 
-![Site Manager - Allowed 확인](./img/스크린샷%202026-04-21%20오후%203.12.23.png)
-
----
-
-> **Step e.** **Browse...** 를 클릭하여 다운로드한 `.pem` 파일을 선택합니다.
-
-![Browse로 pem 파일 등록](./img/스크린샷%202026-04-21%20오후%203.13.30.png)
-
+![QZ Tray Setup - Complete](./img/4.png)
 
 ---
 
-## 4. 프린터 연결 확인
+## 3. QZ Tray .pem 파일 세팅
 
-| Step | 내용 |
-|:---:|---|
-| **a** | BO > Front POS 진입 후 **개발자 모드**를 켜고, **콘솔** 탭을 선택합니다 |
-| | Windows: `F12` 또는 `Ctrl + Shift + I` |
-| | Mac: `Cmd + Option + I` |
-| **b** | **프린터 명**이 정상적으로 출력되는지 확인합니다 |
+`qz-certificate.pem` 파일을 QZ Tray Site Manager에 등록하는 과정입니다.
 
-:::danger 연결이 안 될 경우
-`cradPrint.ts` 파일을 확인해 주세요.
-:::
+---
+
+> **Step a.** 작업표시줄 우측 하단에서 **QZ Tray 아이콘**이 실행 중인지 확인합니다.
+
+![QZ Tray 트레이 아이콘 확인](./img/5.png)
+
+---
+
+> **Step b.** QZ Tray 아이콘을 우클릭한 뒤 **Advanced → Site Manager...** 를 선택합니다.
+
+![Advanced > Site Manager 메뉴](./img/6-1.png)
+
+---
+
+> **Step c.** Site Manager 창에서 **`+` 아이콘**을 클릭합니다.
+
+![Site Manager - + 아이콘 클릭](./img/7.png)
+
+---
+
+> **Step d.** **Browse...** 를 클릭합니다.
+
+![Browse 버튼 클릭](./img/8.png)
+
+---
+
+> **Step e.** 다운로드 폴더에서 `qz-certificate.pem` 파일을 선택한 후 **열기(O)** 를 클릭합니다.
+
+![pem 파일 선택 후 열기](./img/9.png)
+
+---
+
+> **Step f.** **Allowed** 탭에 `iic (iic-bo)` 인증서가 등록된 것을 확인한 후 **Close** 를 클릭합니다.
+
+![인증서 등록 완료 확인](./img/10.png)
+
+---
+
+> **Step g.** 설정을 적용하기 위해 **PC를 재부팅**합니다.
+
+---
+
