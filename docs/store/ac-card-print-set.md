@@ -54,6 +54,8 @@ created: "2026-04-21"
 
 `qz-certificate.pem` 파일을 QZ Tray Site Manager에 등록하는 과정입니다.
 
+> 📎 <a href="/qz-certificate.pem" download>qz-certificate.pem 다운로드</a>
+
 ---
 
 > **Step a.** 작업표시줄 우측 하단에서 **QZ Tray 아이콘**이 실행 중인지 확인합니다.
