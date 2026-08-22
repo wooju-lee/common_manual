@@ -1,0 +1,13 @@
+---
+sidebar_label: Sales Registration
+sidebar_position: 2
+author: Wooju
+created: "2026-08-20"
+countries: [au]
+---
+
+# 판매 등록
+
+>
+>
+> 경로 : `POS`

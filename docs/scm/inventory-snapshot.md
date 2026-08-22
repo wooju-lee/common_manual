@@ -1,5 +1,5 @@
 ---
-sidebar_label: ▸ 재고 스냅샷 조회
+sidebar_label: ▸ Inventory Snapshot
 sidebar_position: 6
 author: Wooju
 created: "2026-04-14"

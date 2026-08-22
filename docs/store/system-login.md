@@ -1,5 +1,5 @@
 ---
-sidebar_label: 시스템 로그인
+sidebar_label: Login
 sidebar_position: 1
 author: Wooju
 created: "2026-04-21"

@@ -115,30 +115,6 @@ export default function Home() {
             </section>
           </div>
 
-          {/* 사용자별 매뉴얼 */}
-          <section className={styles.section}>
-            <h2 className={styles.sectionTitle}>
-              <Translate id="home.manuals.title">사용자별 매뉴얼</Translate>
-            </h2>
-            <div className={styles.cards}>
-              <Link className={styles.card} to="/docs/scm/purchase-order/initial-stock-us">
-                <h3><span className={styles.cardEmoji}>📦</span>SCM</h3>
-                <p>Logistics</p>
-              </Link>
-              <Link className={styles.card} to="/docs/md/system-login">
-                <h3><span className={styles.cardEmoji}>🏷️</span>MD</h3>
-                <p>Merchandising</p>
-              </Link>
-              <Link className={styles.card} to="/docs/lab/system-login">
-                <h3><span className={styles.cardEmoji}>🥽</span>Lab & Optician</h3>
-                <p>Lens Processing</p>
-              </Link>
-              <Link className={styles.card} to="/docs/store/system-login">
-                <h3><span className={styles.cardEmoji}>🏩</span>Store</h3>
-                <p>Store Operations</p>
-              </Link>
-            </div>
-          </section>
         </div>
       </main>
     </Layout>

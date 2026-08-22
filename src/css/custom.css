@@ -37,9 +37,23 @@ html {
   font-size: 76%;
 }
 
+/* Navbar TBD badge */
+.navbar-tbd::after {
+  content: 'TBD';
+  font-size: 0.55rem;
+  font-weight: 600;
+  color: var(--ifm-color-emphasis-500);
+  background: var(--ifm-color-emphasis-200);
+  padding: 1px 4px;
+  border-radius: 3px;
+  margin-left: 4px;
+  vertical-align: super;
+  letter-spacing: 0.03em;
+}
+
 /* Sidebar */
 :root {
-  --doc-sidebar-width: 200px;
+  --doc-sidebar-width: 260px;
 }
 
 
@@ -71,15 +85,65 @@ html {
   opacity: 0.4;
 }
 
-/* Locale dropdown - hide language icon */
+/* Locale dropdown - match country selector style */
 [class*='localeDropdown'] .navbar__link {
-  color: var(--ifm-color-primary);
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 6px;
+  padding: 0.35rem 0.8rem;
+  min-width: 80px;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--ifm-navbar-link-color);
+  transition: border-color 0.2s, background 0.2s;
 }
+
+[class*='localeDropdown'] .navbar__link:hover {
+  border-color: var(--ifm-color-primary);
+  background: var(--ifm-color-emphasis-100);
+}
+
+/* Hide default language icon */
 svg[class*='iconLanguage'] {
   display: none !important;
   width: 0 !important;
   height: 0 !important;
   overflow: hidden !important;
+}
+
+/* Add "Language" label before locale text */
+[class*='localeDropdown'] .navbar__link::before {
+  content: 'Language';
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--ifm-color-emphasis-500);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  padding-right: 0.4rem;
+  margin-right: 0.4rem;
+  border-right: 1px solid var(--ifm-color-emphasis-300);
+}
+
+/* Replace default caret with CSS chevron */
+[class*='localeDropdown'] .navbar__link::after {
+  content: '';
+  width: 5px;
+  height: 5px;
+  border-right: 1.5px solid var(--ifm-color-emphasis-500);
+  border-bottom: 1.5px solid var(--ifm-color-emphasis-500);
+  transform: rotate(45deg);
+  margin-top: -2px;
+  margin-left: auto;
+}
+
+/* Locale dropdown menu */
+[class*='localeDropdown'] .dropdown__menu {
+  min-width: 100%;
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 /* Color mode toggle */
@@ -348,6 +412,109 @@ mark {
   border: none;
   border-top: 1px solid var(--ifm-color-emphasis-200);
   margin: 2rem 0;
+}
+
+/* Country Selector */
+.country-selector {
+  margin-right: 0.6rem;
+}
+
+.country-selector__button {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: var(--ifm-background-color);
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 6px;
+  padding: 0.35rem 0.8rem;
+  min-width: 80px;
+  cursor: pointer;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--ifm-navbar-link-color);
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.country-selector__button:hover {
+  border-color: var(--ifm-color-primary);
+  background: var(--ifm-color-emphasis-100);
+}
+
+.country-selector__field-label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--ifm-color-emphasis-500);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.country-selector__divider {
+  width: 1px;
+  height: 14px;
+  background: var(--ifm-color-emphasis-300);
+  margin: 0 0.2rem;
+}
+
+.country-selector__flag {
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.country-selector__caret {
+  width: 5px;
+  height: 5px;
+  border-right: 1.5px solid var(--ifm-color-emphasis-500);
+  border-bottom: 1.5px solid var(--ifm-color-emphasis-500);
+  transform: rotate(45deg);
+  transition: transform 0.2s ease;
+  margin-top: -2px;
+}
+
+.country-selector__caret--open {
+  transform: rotate(-135deg);
+  margin-top: 2px;
+}
+
+.country-selector__dropdown {
+  position: absolute;
+  top: calc(100% + 4px);
+  right: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0.3rem 0;
+  background: #ffffff;
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  min-width: 100%;
+  z-index: 400;
+}
+
+[data-theme='dark'] .country-selector__dropdown {
+  background: #1e1e1e;
+}
+
+.country-selector__option {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 0.4rem 0.8rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 0.82rem;
+  color: var(--ifm-font-color-base);
+  transition: background 0.15s;
+}
+
+.country-selector__option:hover {
+  background: var(--ifm-color-emphasis-100);
+}
+
+.country-selector__option--active {
+  color: var(--ifm-color-primary);
+  font-weight: 600;
 }
 
 /* Footer */

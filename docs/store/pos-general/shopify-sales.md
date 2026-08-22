@@ -1,8 +1,9 @@
 ---
-sidebar_label: Shopify 매출 처리
+sidebar_label: Shopify Sales
 sidebar_position: 1
 author: Wooju
 created: "2026-04-21"
+countries: [us, ca]
 ---
 
 # 📍 Shopify 매출 처리

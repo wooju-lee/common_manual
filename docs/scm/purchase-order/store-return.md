@@ -1,5 +1,5 @@
 ---
-sidebar_label: 스토어 반품 입고
+sidebar_label: Store Return Inbound
 sidebar_position: 2
 ---
 

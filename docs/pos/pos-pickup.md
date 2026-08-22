@@ -1,6 +1,6 @@
 ---
-sidebar_label: ▸ POS Pickup
-sidebar_position: 3
+sidebar_label: 🛍️ POS Pickup
+sidebar_position: 4
 author: Wooju
 created: "2026-04-21"
 ---

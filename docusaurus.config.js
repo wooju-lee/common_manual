@@ -49,6 +49,31 @@ const config = {
           // Remove this to remove the "edit this page" links.
           editUrl:
             'https://github.com/wooju-lee/common_manual/tree/main/',
+          async sidebarItemsGenerator({defaultSidebarItemsGenerator, docs, ...args}) {
+            const items = await defaultSidebarItemsGenerator({docs, ...args});
+            // Inject frontmatter.countries into customProps for client-side filtering
+            function enrichItems(sidebarItems) {
+              return sidebarItems.map((item) => {
+                if (item.type === 'doc') {
+                  const doc = docs.find((d) => d.id === item.id);
+                  if (doc?.frontMatter?.countries) {
+                    return {
+                      ...item,
+                      customProps: {
+                        ...item.customProps,
+                        countries: doc.frontMatter.countries,
+                      },
+                    };
+                  }
+                }
+                if (item.type === 'category' && item.items) {
+                  return {...item, items: enrichItems(item.items)};
+                }
+                return item;
+              });
+            }
+            return enrichItems(items);
+          },
         },
         blog: {
           showReadingTime: true,
@@ -85,31 +110,61 @@ const config = {
         logo: {
           alt: 'IIC BO Logo',
           src: 'img/logo.png',
+          width: 32,
+          height: 32,
         },
         items: [
           {
             type: 'docSidebar',
-            sidebarId: 'storeSidebar',
+            sidebarId: 'commonSidebar',
             position: 'left',
-            label: 'Store',
+            label: 'Common',
           },
           {
             type: 'docSidebar',
-            sidebarId: 'scmSidebar',
+            sidebarId: 'posSidebar',
             position: 'left',
-            label: 'SCM',
+            label: 'POS',
           },
           {
             type: 'docSidebar',
-            sidebarId: 'labSidebar',
+            sidebarId: 'inventorySidebar',
             position: 'left',
-            label: 'Lab & Optician',
+            label: 'Inventory',
           },
           {
             type: 'docSidebar',
-            sidebarId: 'mdSidebar',
+            sidebarId: 'lmsSidebar',
             position: 'left',
-            label: 'MD',
+            label: 'LMS',
+          },
+          {
+            type: 'docSidebar',
+            sidebarId: 'salesSidebar',
+            position: 'left',
+            label: 'Sales',
+            className: 'navbar-tbd',
+          },
+          {
+            type: 'docSidebar',
+            sidebarId: 'orderSidebar',
+            position: 'left',
+            label: 'Order',
+            className: 'navbar-tbd',
+          },
+          {
+            type: 'docSidebar',
+            sidebarId: 'reportSidebar',
+            position: 'left',
+            label: 'Report',
+            className: 'navbar-tbd',
+          },
+          {
+            type: 'docSidebar',
+            sidebarId: 'systemSettingSidebar',
+            position: 'left',
+            label: 'System Setting',
+            className: 'navbar-tbd',
           },
           {
             type: 'localeDropdown',

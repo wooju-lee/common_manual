@@ -1,11 +1,12 @@
 ---
-sidebar_label: Shopify RX 처방전 등록 및 출고
-sidebar_position: 1
+sidebar_label: 💊 RX Prescription & Outbound
+sidebar_position: 6
 author: Wooju
-created: "2026-04-21"
+created: "2026-08-20"
+countries: [au]
 ---
 
-# 📍 Shopify RX 처방전 등록 및 출고
+# RX 처방전 등록 및 출고
 
 > Shopify에서 발생한 RX 매출 주문의 조회, 처방 정보 등록, Lab 출고 및 배송 라벨 출력까지의 전체 흐름을 안내합니다.
 >
@@ -29,7 +30,7 @@ created: "2026-04-21"
 
 ## 1. RX 주문 확인
 
-![RX Operation List](../img/rx-operation-list.png)
+![RX Operation List](./img/rx-operation-list.png)
 
 Shopify에서 일반 매출과 달리 **RX 매출**이 발생되면, POS > RX Operation View 목록에서 **Unready** 상태로 확인할 수 있습니다.
 
@@ -45,7 +46,7 @@ Shopify에서 일반 매출과 달리 **RX 매출**이 발생되면, POS > RX Op
 
 ## 2. 처방 & 고객 정보 등록
 
-![처방 & 고객 정보 등록](../img/스크린샷%202026-04-21%2018.40.11.png)
+![처방 & 고객 정보 등록](./img/스크린샷%202026-04-21%2018.40.11.png)
 
 > **Step 1.** 스토어 옵티션 담당자는 주문 상세 내 처방전 필수 정보를 선택/기재해 저장합니다.
 
@@ -69,7 +70,7 @@ Shopify에서 일반 매출과 달리 **RX 매출**이 발생되면, POS > RX Op
 
 ## 3. 처방정보 검토를 통해 승인 / 반려 (From Lab Optician)
 
-![Lab 확인 및 승인](../img/스크린샷%202026-04-21%2018.41.07.png)
+![Lab 확인 및 승인](./img/스크린샷%202026-04-21%2018.41.07.png)
 
 Lab 작업자(렌즈 작업자)는 등록된 정보를 확인해, 가능 여부를 판단하여 **Confirm** 또는 **Reject** 처리를 진행합니다.
 
@@ -84,7 +85,7 @@ Lab 작업자(렌즈 작업자)는 등록된 정보를 확인해, 가능 여부�
 
 ## 4. 컨펌된 주문에 한하여, 출고 생성 (Outbound Registration)
 
-![출고 생성](../img/스크린샷%202026-04-21%2018.46.51.png)
+![출고 생성](./img/스크린샷%202026-04-21%2018.46.51.png)
 
 컨펌된 여러 RX 주문을 Lab 실로 일괄적으로 보내기 위해, 보낼 주문을 선택하여 출고를 등록합니다.
 

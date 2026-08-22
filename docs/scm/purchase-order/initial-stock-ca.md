@@ -1,5 +1,5 @@
 ---
-sidebar_label: 법인 물류 입고 (CA)
+sidebar_label: Corporation Inbound (CA)
 sidebar_position: 2
 author: Wooju
 created: "2026-05-05"

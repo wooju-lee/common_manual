@@ -1,5 +1,5 @@
 ---
-sidebar_label: 스토어 입고 조회 및 확정
+sidebar_label: Inbound Confirm
 sidebar_position: 2
 author: Wooju
 created: "2026-04-21"
